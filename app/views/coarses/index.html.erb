@@ -1,0 +1,23 @@
+<h1>Listing coarses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coarses.each do |coarse| %>
+      <tr>
+        <td><%= link_to 'Show', coarse %></td>
+        <td><%= link_to 'Edit', edit_coarse_path(coarse) %></td>
+        <td><%= link_to 'Destroy', coarse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coarse', new_coarse_path %>

@@ -1,0 +1,17 @@
+<%= form_for(@coarse) do |f| %>
+  <% if @coarse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coarse.errors.count, "error") %> prohibited this coarse from being saved:</h2>
+
+      <ul>
+      <% @coarse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
