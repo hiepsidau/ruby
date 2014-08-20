@@ -38,3 +38,20 @@
 #tao bang student,coarse,registration
 #Student.create(:name => 'aaaa')
 #student = Student.first //loi 
+#*******************Advance Active Record 
+Article.where(:title => 'Advance Ative Record')
+Article.where("body like '%Wor'")
+Article.where(:title => ['Advance','Active','Record]')
+Article.where("create_at = ?", Article.last.create_at)
+Article.each do |article|
+	= article.title.
+	- article.comments.each do |content|
+		=content.body
+	end
+end
+Article.limit(50).includes(:comment => :user) //load luon user,Eager loading(active record query)
+#tao ssh
+ssh_keygen
+ cat ~/.ssh/id_rsa #private key
+ cat ~/.ssh/id_rsa.pub #public key
+ 
